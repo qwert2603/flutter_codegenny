@@ -6,7 +6,7 @@ Code generation in Dart. Generate data classes.
 
 Create class-template
 
-```
+```dart
 import 'package:data_class/data_class.dart';
 
 part 'point.g.dart';
@@ -28,7 +28,8 @@ class Point {
 ```
 
 ... and data class will be generated.
-```
+
+```dart
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'point.dart';
