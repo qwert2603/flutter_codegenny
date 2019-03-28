@@ -1,0 +1,12 @@
+name: data_class
+description: A new Flutter package.
+version: 0.0.1
+author: qwert2603
+homepage: qwert2603.com
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+
+dev_dependencies:
