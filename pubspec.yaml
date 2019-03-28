@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   data_class:
     path: data_class/
+  sqflite: ^1.1.3
 
 dev_dependencies:
   flutter_test:

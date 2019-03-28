@@ -12,14 +12,46 @@ class DataClassGenerator extends GeneratorForAnnotation<DataClass> {
     ConstantReader annotation,
     BuildStep buildStep,
   ) {
-    var output = StringBuffer();
-    var classElement = element as ClassElement;
-    var className = "${classElement.name}DataClass";
+    final output = StringBuffer();
+    final classElement = element as ClassElement;
+    final className = "${classElement.name}DataClass";
 
     final typeCheckerExcludeFromEqual = TypeChecker.fromUrl(
         "package:annotation/src/exclude.dart#ExcludeFromEqual");
     final typeCheckerExcludeFromToString = TypeChecker.fromUrl(
         "package:annotation/src/exclude.dart#ExcludeFromToString");
+
+//    final generatedClass = Class((b) => b
+//      ..name = className
+//      ..fields = ListBuilder(classElement.fields.map((fe) => Field((b) => b
+//        ..modifier = FieldModifier.final$
+//        ..name = fe.name
+//        ..type = Reference(fe.type.name))))
+//      ..constructors = ListBuilder([
+//        Constructor((b) => b
+//          ..constant = true
+//          ..requiredParameters =
+//              ListBuilder(classElement.fields.map((fe) => Parameter((b) => b
+//                ..name = fe.name
+//                ..toThis = true)))),
+//      ])
+//      ..methods = ListBuilder([
+//        Method((b) => b
+//          ..name = "operator =="
+//          ..returns = Reference("bool")
+//          ..requiredParameters = ListBuilder([
+//            Parameter((b) => b
+//              ..name = "other"
+//              ..type = Reference("Object"))
+//          ])
+//          ..body = Code("return false;"))
+//      ]));
+//
+//    String classString = generatedClass.accept(new DartEmitter()).toString();
+//    final dartfmt = new DartFormatter();
+//    String output = dartfmt.format(classString);
+//
+//    return output;
 
     output.writeln("class $className {");
     classElement.fields.forEach((FieldElement fe) {
