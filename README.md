@@ -62,7 +62,6 @@ class PointDataClass {
           runtimeType == other.runtimeType &&
           x == other.x &&
           y == other.y &&
-          z == other.z &&
           name == other.name &&
           someList == other.someList &&
           someSet == other.someSet;
@@ -71,14 +70,12 @@ class PointDataClass {
   int get hashCode =>
       x.hashCode ^
       y.hashCode ^
-      z.hashCode ^
       name.hashCode ^
       someList.hashCode ^
       someSet.hashCode;
 
   @override
-  String toString() =>
-      'PointDataClass{x: $x, y: $y, z: $z, name: $name, someList: $someList, someSet: $someSet}';
+  String toString() => 'PointDataClass{x: $x, y: $y, name: $name}';
 
   PointDataClass replaceX(double x) => PointDataClass(
         x: x,
@@ -134,4 +131,5 @@ class PointDataClass {
         someSet: someSet,
       );
 }
+
 ```
