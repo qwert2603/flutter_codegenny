@@ -28,13 +28,10 @@ class FishDataClass {
           runtimeType == other.runtimeType &&
           i == other.i &&
           s == other.s &&
-          f == other.f &&
-          list == other.list &&
-          map == other.map;
+          f == other.f;
 
   @override
-  int get hashCode =>
-      i.hashCode ^ s.hashCode ^ f.hashCode ^ list.hashCode ^ map.hashCode;
+  int get hashCode => i.hashCode ^ s.hashCode ^ f.hashCode;
 
   @override
   String toString() =>

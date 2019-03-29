@@ -17,9 +17,9 @@ class DataClassGenerator extends GeneratorForAnnotation<DataClass> {
     final className = "${classElement.name}DataClass";
 
     final typeCheckerExcludeFromEqual = TypeChecker.fromUrl(
-        "package:annotation/src/exclude.dart#ExcludeFromEqual");
+        "package:data_class/src/exclude.dart#ExcludeFromEqual");
     final typeCheckerExcludeFromToString = TypeChecker.fromUrl(
-        "package:annotation/src/exclude.dart#ExcludeFromToString");
+        "package:data_class/src/exclude.dart#ExcludeFromToString");
 
 //    final generatedClass = Class((b) => b
 //      ..name = className
